@@ -220,9 +220,9 @@ class ColumnVector(val length: Int, data: DoubleArray = DoubleArray(length){0.0}
             throw IllegalArgumentException("ColumnVector.dotProduct: Both operands must be 3 dimensional vectors")
         else {
             return ColumnVector(length, doubleArrayOf(
-                this[1] * other[2] - this[2] * other[1],
-                this[2] * other[0] - this[0] * other[2],
-                this[0] * other[1] - this[1] * other[0]
+                this[2] * other[1] - this[1] * other[2],
+                this[0] * other[2] - this[2] * other[0],
+                this[1] * other[0] - this[0] * other[1]
             ))
         }
     }
